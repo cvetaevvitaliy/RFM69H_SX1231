@@ -12,6 +12,12 @@ Add RFM69_interruptHandler(); in interrupt handler PIN DIO0
 
 ##### example
 ```
+uint8_t* pdata;
+int8_t datarecive[61];
+
+|         |           |
+|         |           |
+
 if(RFM69_receiveDone())
 	{
         pdata = RFM69_receive(&len);
