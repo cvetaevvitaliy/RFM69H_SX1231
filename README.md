@@ -10,8 +10,8 @@ Add RFM69_interruptHandler(); in interrupt handler PIN DIO0
 <br/>
 
 
-#####example
-//C code
+##### example
+//c code
 if(RFM69_receiveDone())
 	{
         pdata = RFM69_receive(&len);
