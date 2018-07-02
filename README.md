@@ -11,14 +11,14 @@ Add RFM69_interruptHandler(); in interrupt handler PIN DIO0
 
 
 ##### example
-
-if(RFM69_receiveDone())<br/>
-	{<br/>
-        pdata = RFM69_receive(&len);<br/>
-          for (int i = 0; i < len; i++)<br/>
-            datarecive[i]=((char)pdata[i]);<br/>
-	}<br/>
-		
+```
+if(RFM69_receiveDone())
+	{
+        pdata = RFM69_receive(&len);
+          for (int i = 0; i < len; i++)
+            datarecive[i]=((char)pdata[i]);
+	}
+```		
 		
 <br/>
 			
