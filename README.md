@@ -37,11 +37,11 @@ if(RFM69_receiveDone())
 ##### example transmit
 ```
 typedef struct {
-	uint16_t        data1; 
-	uint16_t		data2; 
-	uint16_t       	data3;   
-	uint16_t 		data4;
-	uint16_t		data5;
+	uint16_t	data1; 
+	uint16_t	data2; 
+	uint16_t	data3;   
+	uint16_t	data4;
+	uint16_t	data5;
 } Payload;
 
 |        |            |
