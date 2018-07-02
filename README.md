@@ -16,9 +16,11 @@ uint8_t* pdata;
 int8_t datarecive[61];
 
 |         |           |
+
 RFM69_initialize(RF69_433MHZ,NODEID,NETWORKID);
 RFM69_encrypt(ENCRYPTKEY);
 RFM69_promiscuous(true);
+
 |         |           |
 
 if(RFM69_receiveDone())
@@ -41,12 +43,15 @@ typedef struct {
 	uint16_t 		data4;
 	uint16_t		data5;
 } Payload;
+
 |        |            |
 
 RFM69_initialize(RF69_433MHZ,NODEID,NETWORKID);
 RFM69_encrypt(ENCRYPTKEY);
 RFM69_promiscuous(true);
+
 |        |            |
+
 Payload theData;
 
 |        |            |
