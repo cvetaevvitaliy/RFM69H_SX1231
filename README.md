@@ -9,3 +9,16 @@ Add RFM69_interruptHandler(); in interrupt handler PIN DIO0
 Протестировано на STM32F103
 <br/>
 
+
+#####example
+//C code
+if(RFM69_receiveDone())
+	{
+        pdata = RFM69_receive(&len);
+          for (int i = 0; i < len; i++)
+            datarecive[i]=((char)pdata[i]);
+	}
+		
+		
+<br/>
+			
