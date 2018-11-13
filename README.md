@@ -12,7 +12,8 @@ Add RFM69_interruptHandler(); in interrupt handler PIN DIO0
 
 ##### example receive
 ```
-#define ENCRYPTKEY "key" //characters
+
+#define ENCRYPTKEY "sampleEncryptKey" // 16 characters
 #define NODEID 10 //0-255 
 #define NETWORKID 0 // 0-255
 
@@ -33,6 +34,7 @@ if(RFM69_receiveDone())
         pdata = RFM69_receive(&len);
           for (int i = 0; i < len; i++)
             datarecive[i]=((char)pdata[i]);
+	 
 	}
 ```		
 		
@@ -42,7 +44,7 @@ if(RFM69_receiveDone())
 ##### example transmit
 ```
 
-#define ENCRYPTKEY "key" // 14 characters
+#define ENCRYPTKEY "sampleEncryptKey" // 16 characters
 #define NODEID 11 //0-255 
 #define NETWORKID 0 // 0-255
 
