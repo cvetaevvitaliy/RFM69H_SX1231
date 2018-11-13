@@ -47,12 +47,13 @@ if(RFM69_receiveDone())
 #define NETWORKID 0 // 0-255
 
 typedef struct {
-	uint16_t	data1; 
-	uint16_t	data2; 
+	uint8_t		data1; 
+	uint8_t		data2; 
 	uint16_t	data3;   
 	uint16_t	data4;
-	uint16_t	data5;
-} Payload;
+	uint32_t	data5;
+	uint32_t	data6;
+} Payload; // data sizeof max 60 byte 
 
 |        |            |
 
