@@ -12,6 +12,11 @@ Add RFM69_interruptHandler(); in interrupt handler PIN DIO0
 
 ##### example receive
 ```
+#define ENCRYPTKEY "key" //characters
+#define NODEID 10 //0-255 
+#define NETWORKID 0 // 0-255
+
+
 uint8_t* pdata;
 int8_t datarecive[61];
 
@@ -36,6 +41,11 @@ if(RFM69_receiveDone())
 
 ##### example transmit
 ```
+
+#define ENCRYPTKEY "key" // 14 characters
+#define NODEID 11 //0-255 
+#define NETWORKID 0 // 0-255
+
 typedef struct {
 	uint16_t	data1; 
 	uint16_t	data2; 
