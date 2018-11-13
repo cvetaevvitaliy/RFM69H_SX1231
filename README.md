@@ -10,7 +10,7 @@ Add RFM69_interruptHandler(); in interrupt handler PIN DIO0
 <br/>
 
 
-##### example recive
+##### example receive
 ```
 uint8_t* pdata;
 int8_t datarecive[61];
