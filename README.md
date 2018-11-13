@@ -21,11 +21,23 @@ Add RFM69_interruptHandler(); in interrupt handler PIN DIO0
 uint8_t* pdata;
 int8_t datarecive[61];
 
+typedef struct {
+	uint8_t		data1; 
+	uint8_t		data2; 
+	uint16_t	data3;   
+	uint16_t	data4;
+	uint32_t	data5;
+	uint32_t	data6;
+	|                 |
+} Payload; // data sizeof max 60 byte 
+
 |         |           |
 
 RFM69_initialize(RF69_433MHZ,NODEID,NETWORKID);
 RFM69_encrypt(ENCRYPTKEY);
 RFM69_promiscuous(true);
+
+Payload theData;
 
 |         |           |
 
@@ -34,7 +46,7 @@ if(RFM69_receiveDone())
         pdata = RFM69_receive(&len);
           for (int i = 0; i < len; i++)
             datarecive[i]=((char)pdata[i]);
-	 
+	theData = *(Payload*)datarecive;
 	}
 ```		
 		
@@ -55,6 +67,7 @@ typedef struct {
 	uint16_t	data4;
 	uint32_t	data5;
 	uint32_t	data6;
+	|                 |
 } Payload; // data sizeof max 60 byte 
 
 |        |            |
